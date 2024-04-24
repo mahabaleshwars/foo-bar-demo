@@ -26,7 +26,7 @@ jobs:
             [
               {
                   "id": "github",
-                  "url": "https://maven.pkg.github.com/mahabaleshwars/demo"
+                  "url": "https://maven.pkg.github.com/mahabaleshwars/foo-bar-demo"
               }
             ]
           servers: >
