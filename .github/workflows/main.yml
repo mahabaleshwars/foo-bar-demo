@@ -19,26 +19,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
-      - name: Creating settings.xml
-        uses: whelk-io/maven-settings-xml-action@v22
-        with:
-          repositories: >
-            [
-              {
-                  "id": "github",
-                  "url": "https://maven.pkg.github.com/mahabaleshwars/foo-bar-demo"
-              }
-            ]
-          servers: >
-            [
-              {
-                "id":"github",
-                "username":"${{ github.actor }}",
-                "password":"${{ secrets.REPO_TOKEN }}"
-              }
-            ]
-      - name: Test
-        run: cat ~/.m2/settings.xml
 
       - name: Publish to GitHub Packages Apache Maven
         run: mvn clean deploy -X
